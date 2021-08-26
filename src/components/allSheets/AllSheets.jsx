@@ -6,7 +6,7 @@ function AllSheets(props){
     const Sheets = props.createSheets;
     return(
         <div>{Sheets.map(item => {
-            return <TaskSheet heading={item} key={id++}/>
+            return <TaskSheet heading={item} key={id++} data={props.data}/>
         })}</div>
     )
 }

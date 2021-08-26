@@ -1,10 +1,11 @@
 import React , { useState } from 'react'; 
-import TaskSheet from './components/taskSheet/TaskSheet.jsx';
 import AllSheets from './components/allSheets/AllSheets.jsx';
+import taskData from './Data.js';
 
 function App() {
+  let headings = Object.keys(taskData)
   const [sheetName, setSheetName] = useState('');
-  const [sheetItems, setSheetItems] = useState([]);
+  const [sheetItems, setSheetItems] = useState([...headings]);
 
   const itemEvent = (event) => {
     setSheetName(event.target.value);
@@ -14,16 +15,16 @@ function App() {
     setSheetItems(prevItems => {
       return [ sheetName ,...prevItems];
     })
+    setSheetName('');
   };
   
   return (
     <div className="App">
       <div className="taskDiv" id="taskDiv">
-        {/* <TaskSheet /> */}
         <input type="text" value={sheetName} onChange={itemEvent} placeholder="Enter sheet name"/>
         <button onClick={addSheet}>Create Sheet</button>
       </div>
-      <AllSheets createSheets={sheetItems} />
+      <AllSheets createSheets={sheetItems} data={taskData}/>
     </div>
   );
 }

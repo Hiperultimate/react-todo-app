@@ -2,7 +2,10 @@ import React from 'react';
 
 function SubTask(props){
     return(
-        <ul><input type="checkbox"/>{props.task}</ul>
+        <ul>
+            <input type="checkbox"/>{props.task}
+            <a href="#" onClick={props.handleDelete}>Delete</a>
+        </ul>
     )
 }
 
