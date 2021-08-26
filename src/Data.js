@@ -1,11 +1,11 @@
 // Heading : sub-task pairs
 // const taskData = ["cleaning", "exercising"];
 const taskData = {
-    "cleaning" : ["clean car", "clean room", "clean sink"],
-    "exercising" : ["running", "jogging", "sleeping"],
-    "farming" : ["plant", "water", "harvest"],
+    "Cleaning" : ["Clean car", "Clean room", "Clean sink"],
+    "Exercising" : ["Running", "Jogging", "Sleeping"],
+    "Farming" : ["Plant", "Water", "Harvest"],
 }
 // let check = Object.keys(temp);
-// console.log(check);
+// console.log(taskData["bala"]);
 
 export default taskData;

@@ -1,0 +1,23 @@
+.menu-sheet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.add-task-section{
+    padding: 10px;
+}
+
+.task-heading{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px; 
+}
+
+ul {
+    list-style-type: none;
+    margin : 0;
+    padding-inline-start: 0px;
+}
+

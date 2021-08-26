@@ -1,6 +1,7 @@
 import React , { useState } from 'react'; 
 import AllSheets from './components/allSheets/AllSheets.jsx';
 import taskData from './Data.js';
+import './App.css';
 
 function App() {
   let headings = Object.keys(taskData)
@@ -13,7 +14,7 @@ function App() {
 
   const addSheet = () => {
     setSheetItems(prevItems => {
-      return [ sheetName ,...prevItems];
+      return [ ...prevItems,sheetName ];
     })
     setSheetName('');
   };
