@@ -1,6 +1,20 @@
 .taskDiv{
+    width: 40%;
+    height: 40px;
     display: flex;
+    padding-bottom: 50px;
+}
+
+.taskDiv input{
+    flex: 7;
+}
+
+.taskDiv button{
+    flex: 3;
+}
+
+.sheet-input-container{
+    display: flex; 
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
 }

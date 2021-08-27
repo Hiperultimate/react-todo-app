@@ -34,15 +34,18 @@ function MenuSheet(props){
 
     return(
         <div className="menu-sheet">
+            <div className="sheet-content">
             <div className="task-heading">{props.heading}</div>
+            <span className="underline"></span>
             <div className="sub-task">
-                <ul>
+                <ul className="list-parent">
                     {sheetItems.map((item)=> <SubTask task={item} key={id++} handleDelete={()=>deleteSubtask(item)}/> )}
                 </ul>
             </div>
             <div className="add-task-section">
-                <input type="text" value={newItem} placeholder="Add" onChange={itemEvent}/>
+                <input type="text" value={newItem} placeholder="Write Something..." onChange={itemEvent}/>
                 <button onClick={addToSheet}>Add Tasks</button>
+            </div>
             </div>
         </div>
     );

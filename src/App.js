@@ -21,9 +21,11 @@ function App() {
   
   return (
     <div className="App">
-      <div className="taskDiv" id="taskDiv">
-        <input type="text" value={sheetName} onChange={itemEvent} placeholder="Enter sheet name"/>
-        <button onClick={addSheet}>Create Sheet</button>
+      <div className="sheet-input-container">
+        <div className="taskDiv" id="taskDiv">
+          <input type="text" value={sheetName} onChange={itemEvent} placeholder="Enter Sheet Name"/>
+          <button onClick={addSheet}>Create Sheet</button>
+        </div>
       </div>
       <AllSheets createSheets={sheetItems} data={taskData}/>
     </div>
